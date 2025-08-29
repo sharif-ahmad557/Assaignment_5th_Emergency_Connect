@@ -43,7 +43,7 @@ for (const btn of callButtons) {
     const div = document.createElement("div");
     div.innerHTML = `
       <div id="call_history_list"
-          class="font-semibold shadow-lg bg-white py-4 my-2 px-2 rounded-lg flex justify-between items-center">
+          class="font-semibold shadow-lg bg-[#e9e5e5] m-2 py-4 px-2 rounded-lg flex justify-between items-center">
         <span>${serviceName} (${serviceNumber})</span>
         <span>${new Date().toLocaleTimeString()}</span>
       </div>
@@ -74,4 +74,3 @@ document.getElementById("call_history").addEventListener("click", function () {
   callHistoryList.innerHTML = "";
   console.log("call history clicked");
 });
-
