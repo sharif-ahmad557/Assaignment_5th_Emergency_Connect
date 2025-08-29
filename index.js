@@ -51,3 +51,27 @@ for (const btn of callButtons) {
     callHistoryList.appendChild(div);
   });
 }
+// Challenges section
+// Copy Button
+const copyButtons = document.querySelectorAll(".card_btn_left");
+const copyCount = document.getElementById("copy_count").querySelector("span");
+
+for (const btn of copyButtons) {
+  btn.addEventListener("click", function (e) {
+    const card = e.target.closest(".card");
+    const number = card.querySelector(".service_number").innerText;
+
+    navigator.clipboard.writeText(number).then(() => {
+      let currentCopy = parseInt(copyCount.innerText);
+      copyCount.innerText = currentCopy + 1;
+      alert("Copied Number: " + number);
+    });
+  });
+}
+
+// Clear Call History
+document.getElementById("call_history").addEventListener("click", function () {
+  callHistoryList.innerHTML = "";
+  console.log("call history clicked");
+});
+
