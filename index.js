@@ -6,14 +6,11 @@ for (const icon of heartIcons) {
   icon.addEventListener("click", function () {
     let count = parseInt(heartCount.innerText);
     heartCount.innerText = count + 1;
-  });
-}
-for (const icon of heartIcons) {
-  icon.addEventListener("click", function () {
     icon.classList.remove("fa-regular");
     icon.classList.add("fa-solid", "text-red-800");
   });
 }
+
 // Coin & Call History
 
 const coinCount = document.getElementById("coin_count");
@@ -44,7 +41,7 @@ for (const btn of callButtons) {
     div.innerHTML = `
       <div id="call_history_list"
           class="font-semibold shadow-lg bg-[#e9e5e5] m-2 py-4 px-2 rounded-lg flex justify-between items-center">
-        <span>${serviceName} (${serviceNumber})</span>
+        <span>${serviceName} : ${serviceNumber}</span>
         <span>${new Date().toLocaleTimeString()}</span>
       </div>
     `;
@@ -72,5 +69,4 @@ for (const btn of copyButtons) {
 // Clear Call History
 document.getElementById("call_history").addEventListener("click", function () {
   callHistoryList.innerHTML = "";
-  console.log("call history clicked");
 });
