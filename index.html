@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency_Hotline</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!-- daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwindcss CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font_awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f5fff6]">
+    <header class="min-h-[100px]">
+      <div
+        class="nav_section bg-white my-6 w-11/12 flex flex-col sm:flex-row justify-between items-center mx-auto gap-4 p-4 rounded-lg"
+      >
+        <div class="nav_left flex items-center">
+          <img src="./assets/logo.png" class="w-[50px] h-[50px] mr-3" alt="" />
+          <h2 class="text-[#006747] text-[22px] font-bold leading-tight">
+            Emergency<br />Service
+          </h2>
+        </div>
+        <div class="nav_rig flex justify-between gap-4 items-center">
+          <div
+            class="love gap-2 rounded-3xl py-2 px-6 flex justify-between items-center bg-[#31b34d1a]"
+          >
+            <p id="heart_count" class="w-4 h-6 font-bold">0</p>
+            <img class="w-[20px] h-[20px]" src="./assets/heart.png" alt="" />
+          </div>
+          <div
+            class="coin gap-4 rounded-3xl py-2 px-6 flex justify-between items-center bg-[#31b34d1a]"
+          >
+            <p id="coin_count" class="w-4 h-6 font-bold">100</p>
+            <img class="w-[20px] h-[20px]" src="./assets/coin.png" alt="" />
+          </div>
+          <div class="">
+            <button
+              id="copy_count"
+              class="bg-[#00a63e] rounded-3xl py-2 px-6 text-white font-semibold"
+            >
+              <span>0</span> copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
